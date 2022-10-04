@@ -39,16 +39,16 @@ export default {
       });
       p.complete = !p.complete;
     },
-    computed: {
-      filteredProjects() {
-        if (this.current === "completed") {
-          return this.projects.filter((project) => project.complete);
-        }
-        if (this.current === "ongoing") {
-          return this.projects.filter((project) => !project.complete);
-        }
-        return this.projects;
-      },
+  },
+  computed: {
+    filteredProjects() {
+      if (this.current === "completed") {
+        return this.projects.filter((project) => project.complete);
+      }
+      if (this.current === "ongoing") {
+        return this.projects.filter((project) => !project.complete);
+      }
+      return this.projects;
     },
   },
 };
